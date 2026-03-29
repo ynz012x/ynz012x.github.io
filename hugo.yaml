@@ -1,0 +1,112 @@
+baseURL: "https://ynz012x.github.io/"
+languageCode: "zh-cn"
+title: "ynz012x"
+theme: ["PaperMod"]
+
+hasCJKLanguage: true
+enableInlineShortcodes: true
+enableEmoji: true
+enableRobotsTXT: true
+
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+paginate: 10
+minify:
+  disableXML: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+menu:
+  main:
+    - identifier: posts
+      name: 文章
+      url: /posts/
+      weight: 1
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 2
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 3
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 4
+    - identifier: about
+      name: 关于
+      url: /about/
+      weight: 5
+
+params:
+  env: production
+  author: "ynz012x"
+  description: "ynz012x 的个人主页与博客"
+  keywords: [Blog, Portfolio]
+  defaultTheme: auto
+  DateFormat: "2006-01-02"
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowToc: true
+  TocOpen: false
+  comments: false
+
+  profileMode:
+    enabled: true
+    title: "你好，我是 ynz012x"
+    subtitle: "欢迎来到我的个人主页与博客。"
+    imageUrl: "img/avatar.png"
+    imageTitle: "ynz012x"
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      - name: 文章
+        url: /posts/
+      - name: 归档
+        url: /archives/
+      - name: 关于
+        url: /about/
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/ynz012x"
+    - name: rss
+      url: "index.xml"
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 1
+    keys: [title, permalink, summary, content]
+
+  cover:
+    linkFullImages: true
+    hiddenInList: false
+    hiddenInSingle: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
